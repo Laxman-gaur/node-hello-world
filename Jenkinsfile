@@ -8,12 +8,6 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                sh './jenkins/scripts/test.sh'
-            }
-        }
-        
         stage('change directory') {
             steps {
                 sh 'cd /home/ubuntu/node-hello-world/'
