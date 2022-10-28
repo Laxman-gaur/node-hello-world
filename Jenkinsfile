@@ -22,7 +22,7 @@ pipeline {
 
         stage('deploy') { 
             steps {
-                sh 'npm start /home/ubuntu/node-hello-world/' 
+                sh 'pm2 start index.js' 
             }
         }
     }
