@@ -2,17 +2,18 @@ pipeline {
     agent { label 'agent-1' }
    
     stages {
-          stage('change directory') {
-            steps {
-                sh 'cd /home/ubuntu/node-hello-world/'
-            }
-        }
         stage('Build') {
             steps {
                 sh 'npm install'
             }
         }
 
+        stage('change directory') {
+            steps {
+                sh 'cd /home/ubuntu/node-hello-world/'
+            }
+        }
+      
         stage('approve') {
             steps {
                 input 'kindly approve for this deployment'
