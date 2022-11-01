@@ -3,7 +3,7 @@ const port = process.env.PORT || 9000;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello Laxman ! Welcome to Node js Applicaiton.\n'
+  const msg = 'Hello Laxman ! Welcome to Node js Applicaiton !\n'
   res.end(msg);
 });
 
